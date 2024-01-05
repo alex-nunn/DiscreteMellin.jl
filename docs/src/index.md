@@ -1,14 +1,16 @@
-```@meta
-CurrentModule = DiscreteMellin
-```
 
 # DiscreteMellin
+Method for evaluating the Mellin transform of discrete time signals.
 
-Documentation for [DiscreteMellin](https://github.com/alex-nunn/DiscreteMellin.jl).
+Code available on github at [DiscreteMellin](https://github.com/alex-nunn/DiscreteMellin.jl).
 
-```@index
-```
+## Requirements
+Requires Julia version >= 1.10
 
-```@autodocs
-Modules = [DiscreteMellin]
+## Installation
+This package can be installed in a Julia environment using the command
+
+```julia-repl
+import Pkg
+Pkg.add("https://github.com/alex-nunn/DiscreteMellin.jl")
 ```
