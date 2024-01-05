@@ -1,4 +1,9 @@
 name: CI
+
+permissions:
+  actions: write
+  contents: read
+
 on:
   push:
     branches:
@@ -43,6 +48,7 @@ jobs:
       statuses: write
     steps:
       - uses: actions/checkout@v4
+      - uses: julia-actions/cache@v1
       - uses: julia-actions/setup-julia@v1
         with:
           version: '1'
