@@ -1,5 +1,5 @@
 module DiscreteMellin
+include("direct_methods.jl")
 
-# Write your package code here.
-
+export mellin_pconstant, mellin_plinear
 end

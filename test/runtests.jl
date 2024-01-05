@@ -1,6 +1,8 @@
 using DiscreteMellin
+using LinearAlgebra
+using SpecialFunctions
 using Test
 
 @testset "DiscreteMellin.jl" begin
-    # Write your tests here.
+    include("test_direct_methods.jl")
 end
