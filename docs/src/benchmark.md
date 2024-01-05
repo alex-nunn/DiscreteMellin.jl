@@ -2,15 +2,17 @@
 The functions [`mellin_plinear`](@ref) and [`mellin_pconstant`](@ref) estimate the Mellin transform of discrete time signals on the imaginary axis in frequency space. This estimate is derived by evaluating the continuous Mellin transform integral with an interpolation of the discrete data,
 
 ```math
-\scriptM[f](s) = \int_0^\infty f(t) t^{s-1} dt = \sum_{i=1}^n f(t_i) \int_0^\infty B_i(t) t^{s-1}dt, 
+\mathcal{M}[f](s) = \int_0^\infty f(t) t^{s-1} dt = \sum_{i=1}^n f(t_i) \int_0^\infty B_i(t) t^{s-1}dt, 
 ```
+
 where ``B_i(t)`` are the nodal basis functions of the interpolation.
 
 We can compare the convergence rates of the piecewise constant and linear interpolation methods by comparing the absolute error in the predicted Mellin transforms. A comparison for the known Mellin transform pair,
 
 ```math
-f(t) = e^t, \qquad \scriptM[f](s) = \Gamma(s),
+f(t) = e^t, \qquad \mathcal{M}[f](s) = \Gamma(s),
 ```
+
 is shown below.
 
 ```@example
@@ -31,7 +33,7 @@ ss = 1im * ωs
 expect_mod = @. ss * f_mellin(ss)
 
 # Convergence study
-Ns = 100:100:10000
+Ns = 100:500:10000
 transforms = (mellin_pconstant, mellin_plinear)
 
 study = map(Ns) do N
@@ -44,7 +46,7 @@ study = map(Ns) do N
     ]
 end |> stack
 
-plot(
+p = plot(
     Ns, transpose(study);
     title=L"Convergence comparison: $f(t)=e^t$",
     xlabel=L"$N$ (number of samples)",
@@ -55,8 +57,5 @@ plot(
     linewidth=2,
     size=(500, 450),
     frame=:box
-); nothing
-savefig("01_benchmark.png"); nothing # hide
+)
 ```
-
-![](01_benchmark.png)
