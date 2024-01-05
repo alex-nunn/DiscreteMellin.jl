@@ -1,6 +1,6 @@
 
 # DiscreteMellin
-Method for evaluating the Mellin transform of discrete time signals.
+Methods for evaluating the Mellin transform of discrete time signals.
 
 Code available on github at [DiscreteMellin](https://github.com/alex-nunn/DiscreteMellin.jl).
 
