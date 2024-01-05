@@ -46,7 +46,7 @@ study = map(Ns) do N
     ]
 end |> stack
 
-p = plot(
+plot(
     Ns, transpose(study);
     title=L"Convergence comparison: $f(t)=e^t$",
     xlabel=L"$N$ (number of samples)",
@@ -58,4 +58,7 @@ p = plot(
     size=(500, 450),
     frame=:box
 )
+savefig("01_benchmark.png"); nothing # hide
 ```
+
+![](01_benchmark.png)

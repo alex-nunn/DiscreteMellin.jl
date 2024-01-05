@@ -1,6 +1,8 @@
 using DiscreteMellin
 using Documenter
 
+ENV["GKSwstype"] = "100"
+
 DocMeta.setdocmeta!(DiscreteMellin, :DocTestSetup, :(using DiscreteMellin); recursive=true)
 
 makedocs(;
