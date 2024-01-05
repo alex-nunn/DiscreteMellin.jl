@@ -1,0 +1,13 @@
+name = "DiscreteMellin"
+uuid = "5750eb73-d5e3-418e-80a7-d258e1bd89f7"
+authors = ["Alex Nunn <alex.nunn@pm.me> and contributors"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.9"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
