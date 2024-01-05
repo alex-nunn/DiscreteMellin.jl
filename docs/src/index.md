@@ -1,5 +1,5 @@
 ```@meta
-CurrentModule = uESTplanar
+CurrentModule = DiscreteMellin
 ```
 
 # DiscreteMellin
