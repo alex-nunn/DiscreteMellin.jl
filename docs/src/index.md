@@ -15,5 +15,5 @@ This package can be installed in a Julia environment using the command
 
 ```julia-repl
 import Pkg
-Pkg.add("https://github.com/alex-nunn/DiscreteMellin.jl")
+Pkg.add("https://github.com/alex-nunn/DiscreteMellin.jl.git")
 ```
