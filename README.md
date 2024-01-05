@@ -6,8 +6,6 @@
 
 Methods for evaluating the Mellin transform of discrete time signals.
 
-Code available on github at [DiscreteMellin](https://github.com/alex-nunn/DiscreteMellin.jl).
-
 ## Requirements
 Requires Julia version >= 1.10
 
